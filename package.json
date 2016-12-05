@@ -1,0 +1,45 @@
+{
+  "name": "aws-request",
+  "version": "1.0.0",
+  "description": "Project code for Medium article: AWS.Request Class on the JavaScript SDK",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "hjs-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/guzmonne/aws-request-class.git"
+  },
+  "keywords": [
+    "AWS",
+    "SDK",
+    "Node",
+    "Webpack"
+  ],
+  "author": "Guzman Monne <gmonne@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guzmonne/aws-request-class/issues"
+  },
+  "homepage": "https://github.com/guzmonne/aws-request-class#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.26.1",
+    "json-loader": "^0.5.4",
+    "postcss-loader": "^1.2.0",
+    "style-loader": "^0.13.1",
+    "webpack-visualizer-plugin": "^0.1.5"
+  },
+  "dependencies": {
+    "hjs-webpack": "^8.4.3",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}

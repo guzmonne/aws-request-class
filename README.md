@@ -18,3 +18,54 @@ In this article, I want to explore through some examples the different ways the 
 Setup
 ---
 
+Let's init a new `npm` project to keep track of all our dependencies. We'll also use `npm` scripts to run and build our app.
+
+```
+npm init
+```
+
+As I mentioned on the introduction, we'll be using `hjs-webpack` to simplify webpack's configuration. This package was created by Henrik Joreteg as an opinionated way to build apps with webpack. I sugges you [give it a try](https://github.com/HenrikJoreteg/hjs-webpack) if you don't know it. It is not needed to work with the AWS SDK, you can just use webpack as you normally do if you want.
+
+So, let's install through npm the `hjs-webpack` module and some other necessary dependencies.
+
+```
+npm install --save-dev hjs-webpack css-loader postcss-loader style-loader autoprefixer babel-core babel-loader json-loader webpack-visualizer-plugin babel-preset-es2015 webpack react react-dom
+```
+
+You may have realized that I also included React as a dependecy. This is to handle the visual aspect of the page. Since this is not meant to be a React article I'll try to present the code necessary to run the app and explain what we are doing to set it up without being to dense. If you have any question just ask, or check the [React docs](https://facebook.github.io/react/docs/installation.html).
+
+Let's configure babel to use `es2015` and `react` presets and to handle [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html). Create a file on your project's root called `.babelrc` and include the following code:
+
+```
+{
+  "presets": ["es2015", "react"],
+  "env": {
+    "development": {
+      "presets": ["react-hmre"]
+    }
+  }
+}
+```
+
+We are ready to build our webpack configuration using `hjs-webpack`. Let's create a file called `webpack.config.js` and add the following configuration:
+
+// TODO: Insert webpack.config.js configuration gist URL
+
+To run our dev server and build our project we'll add a couple of entries to the scripts section of our `package.json` config.
+
+```
+{
+  ...
+  "scripts": {
+    ...
+   "start": "hjs-dev-server",
+   "build": "webpack"    
+  }
+  ...
+}
+```  
+
+We also have to create the `src/index.js` and `src/app.js` files to have something to render on the page. Add these files to the a new `src` folder:
+
+// TODO: Add gist for app.js and index.js files.
+
