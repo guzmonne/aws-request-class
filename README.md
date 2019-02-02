@@ -1,6 +1,8 @@
 AWS.Request Class on the JavaScript SDK
 ===
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/guzmonne/aws-request-class.svg)](https://greenkeeper.io/)
+
 The AWS JavaScript SDK is a fantastic tool to leverage the power of the AWS services. All the features provided by the cloud giant are accesible through it. And now, after version 2.6.1 it supports webpack, which makes creating bundles of it a breeze. With webpack, we can only include the bits and pieces we need for our application. Want to add a way to upload files to S3? Ineract directly with DynamoDB? Push notification to other clients through SNS? Just add the client you need and start coding. Webpack will trim away all the unnecessary code, leaving our bundle JavaScript as slim as possible.
 
 The best source to undestand the capabilities of the SDK is through it main [documentation site](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/top-level-namespace.html). All the information for all AWS serices are listed on it. As the documentation states:
